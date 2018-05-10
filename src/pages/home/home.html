@@ -1,14 +1,56 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Login
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+	<div class="login-container">
+		<ion-avatar id="app-logo">
+			<!-- <img src="../../assets/icon/ic_launcher.png" width="80" height="80"> -->
+			<img src="assets/icon/ic_launcher.png" width="80" height="80">
+		</ion-avatar>
+	  		
+		<ion-card id="login-card">
+		  <div class="border-red"></div>
+		  <ion-card-header>
+		   	Find<font color="#F9572A">U</font>
+		  </ion-card-header>
+
+		  <ion-card-content>
+		  	<div class="login-btns-container">
+		  		<div class="left-half">
+		  			<button ion-button outline item-end icon-left login-btns-left color="facebook" (click)="socialLogin('facebook')">
+				      <ion-icon name="logo-facebook"  md="logo-facebook"></ion-icon>
+				      Facebook
+				    </button>
+		  		</div>
+		  		<div class="right-half">
+		  			<button ion-button outline item-end icon-left login-btns-right color="google" (click)="socialLogin('google')">
+				       <ion-icon ios="logo-google" md="logo-google"></ion-icon>
+				      Google
+				    </button>
+		  		</div>
+		  		
+		  	</div><br><br>
+		  	<div class="login-btns-container">
+		  		<div class="left-half">
+		  			<button ion-button outline item-end icon-left login-btns-left color="twitter" (click)="socialLogin('twitter')">
+				      <ion-icon ios="logo-twitter" md="logo-twitter"></ion-icon>
+				      Twitter
+				    </button>
+		  		</div>
+		  		<div class="right-half">
+		  			<button ion-button outline item-end icon-left login-btns-right color="email" (click)="emailLogin()">
+				      <ion-icon name="mail"></ion-icon>
+				      Email
+				    </button>
+		  		</div>
+		  	</div>
+		  </ion-card-content>
+
+		</ion-card>
+	</div>
 </ion-content>
